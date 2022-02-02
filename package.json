@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "start": "tsc && node dist/api.js",
+    "build": "tsc",
+    "test": "node_modules/.bin/mocha --timeout 300000 -r ts-node/register src/**/*.test.ts",
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+    "bundle": "gulp bundle --gulpfile node_modules/paperback-extensions-common/src/repo-gulpfile.js"
+  },
+  "dependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "cheerio": "^1.0.0-rc.10",
+    "paperback-extensions-common": "^5.0.0-alpha.5",
+    "ts-mocha": "^9.0.2",
+    "tsify": "^5.0.4",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.30",
+    "@types/mocha": "^9.1.0",
+    "mocha": "^9.2.0",
+    "nyc": "^15.1.0"
+  }
+}
